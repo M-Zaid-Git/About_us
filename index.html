@@ -14,15 +14,15 @@
   <body class="bg-[#111] text-white">
     <!-- Header Section -->
     <header
-    class="z-10 flex items-center justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto group"
-        >
+      class="z-10 flex items-center justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto group"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="70"
         viewBox="0 0 52.5 52.5"
         height="70"
         version="1.0"
-        class="absolute right-1 top-1 sm:relative  animate-pulse "
+        class="absolute right-1 top-1 sm:relative animate-pulse"
       >
         <defs>
           <clipPath id="prefix__a">
@@ -60,7 +60,6 @@
           />
         </g>
       </svg>
-      
     </header>
 
     <!-- Main page -->
@@ -73,7 +72,7 @@
         />
 
         <div
-          class="sm:top-40  top-62 leading-5 justify-center items-center relative "
+          class="sm:top-40 top-62 leading-5 justify-center items-center relative"
         >
           <h1 class="text-2xl font-extrabold text-[64px] font-[Spartan]">
             M Zaid
@@ -81,9 +80,7 @@
           <p>A web developer from PU</p>
         </div>
         <!-- Social Media -->
-        <ul
-          class=" text-[#b0b2c3] absolute flex gap-5 bottom-40 sm:scale-120"
-        >
+        <ul class="text-[#b0b2c3] absolute flex gap-5 bottom-40 sm:scale-120">
           <li>
             <a
               href="https://www.linkedin.com/in/muhammad-zaid-yaseen?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&original_referer=http%3A%2F%2Fzaid.run.place%2F"
@@ -174,7 +171,19 @@
         <div class="w-full">
           <img src="./Assets/contact-me.svg" alt="phone" />
         </div>
-        <form class="w-full" name="contactUS" netlify>
+        <form
+          class="w-full"
+          name="contactUS"
+          method="post"
+          netlify
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contactUS" />
+          <p class="hidden">
+            <label
+              >Don’t fill this out if you're human: <input name="botField"
+            /></label>
+          </p>
           <label
             for="name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
